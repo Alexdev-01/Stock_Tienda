@@ -1,0 +1,17 @@
+Button {
+   /*-fx-background-color: linear-gradient(#a8aeb1, #7e8b90);*/ /* Gradient gris */
+    -fx-background-color: linear-gradient(#d4d4d4, #4b5c63); /* Gradient gris */
+
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 10px;
+    /*-fx-border-radius: 5px;*/
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 4, 0, 0, 2);
+    -fx-font-weight: bold;
+
+}
+
+.text-field {
+    -fx-border-radius: 5px;
+
+}

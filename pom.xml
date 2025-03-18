@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>es.tokioschool</groupId>
+  <artifactId>M3_P3_Control-de-Stock</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+    <properties>
+		<java.version>17</java.version>
+		<javafx.version>22</javafx.version>
+	</properties>
+	
+	<dependencies>
+		<!-- javafx-controls, son todos los componentes-->
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>22.0.1</version>
+		</dependency>
+		<!-- javafx-fxml, son todas las anotaciones @FXML en el AppController.java-->
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-fxml</artifactId>
+			<version>22.0.1</version>
+		</dependency>
+		<!--javafx-web, es la libreria  private HTMLEditor html_editor; en AppController.java-->
+		<!-- <dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-web</artifactId>
+			<version>22.0.1</version>
+		</dependency> -->
+		<!--libreria lombok -->
+		<!-- <dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.32</version>
+		</dependency>-->
+	</dependencies>
+	
+	<build>
+		<plugins>
+			<!--Plugin para compilar, si ponemos versiones muy antiguas podemos tener problemas -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
+				<configuration>
+					<source>17</source>	<!--version 17 -->
+					<target>17</target>
+				</configuration>
+			</plugin>
+			<!--Plugin para ejecucion de JavaFX en Maven -->
+			<plugin>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-maven-plugin</artifactId>
+				<version>0.0.8</version>
+				<configuration>
+					<javafxVersion>22.0.1</javafxVersion>
+					<!--Hay q indicar la Aplicacion -->
+					<mainClass>Main</mainClass>	<!--App.java-->
+				</configuration>
+			</plugin>
+		</plugins>
+  
+	</build>
+  
+</project>
